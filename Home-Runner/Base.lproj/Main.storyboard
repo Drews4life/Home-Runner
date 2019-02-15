@@ -175,6 +175,9 @@
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEf-2A-wPF">
                                 <rect key="frame" x="255" y="552" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnClick:" destination="h5S-Zh-4UX" eventType="touchUpInside" id="F64-gI-Die"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="njj-zg-YZp">
                                 <rect key="frame" x="53" y="561" width="57" height="57"/>
@@ -209,6 +212,10 @@
                         <viewLayoutGuide key="safeArea" id="iwC-Tc-d31"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLbl" destination="n2C-Bs-ZW8" id="8Jo-ta-qOb"/>
+                        <outlet property="durationLbl" destination="GIo-QX-2CC" id="Gpp-3R-z0s"/>
+                        <outlet property="paceLbl" destination="SGP-1K-sL6" id="02c-Cr-Vo1"/>
+                        <outlet property="pauseBtn" destination="nEf-2A-wPF" id="FrZ-G9-s3N"/>
                         <outlet property="sliderBackground" destination="KpZ-d4-Qfq" id="tSL-h3-k2n"/>
                         <outlet property="sliderImgView" destination="njj-zg-YZp" id="0j9-mK-VBb"/>
                     </connections>

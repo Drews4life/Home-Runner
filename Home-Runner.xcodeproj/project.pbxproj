@@ -15,6 +15,7 @@
 		66090C482215D5050036D23A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66090C462215D5050036D23A /* LaunchScreen.storyboard */; };
 		66090C552215F63F0036D23A /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66090C542215F63F0036D23A /* CurrentRunViewController.swift */; };
 		66F8318D221715E50066DA3B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8318C221715E50066DA3B /* LocationViewController.swift */; };
+		66F8318F221743200066DA3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8318E221743200066DA3B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		66090C492215D5050036D23A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66090C542215F63F0036D23A /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
 		66F8318C221715E50066DA3B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		66F8318E221743200066DA3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		66090C4F2215D57A0036D23A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				66F8318E221743200066DA3B /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F8318D221715E50066DA3B /* LocationViewController.swift in Sources */,
+				66F8318F221743200066DA3B /* Extensions.swift in Sources */,
 				66090C552215F63F0036D23A /* CurrentRunViewController.swift in Sources */,
 				66090C402215D5040036D23A /* RunStatisticViewController.swift in Sources */,
 				66090C3C2215D5040036D23A /* AppDelegate.swift in Sources */,
