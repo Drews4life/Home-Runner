@@ -18,6 +18,8 @@
 		664994D422184727009CAAF2 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664994D322184727009CAAF2 /* Run.swift */; };
 		664994D622185195009CAAF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664994D522185195009CAAF2 /* Constants.swift */; };
 		664994D822185558009CAAF2 /* RunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664994D722185558009CAAF2 /* RunCell.swift */; };
+		664994DA22186BE2009CAAF2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664994D922186BE2009CAAF2 /* Location.swift */; };
+		664994DC221870AA009CAAF2 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664994DB221870AA009CAAF2 /* RealmConfig.swift */; };
 		66F8318D221715E50066DA3B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8318C221715E50066DA3B /* LocationViewController.swift */; };
 		66F8318F221743200066DA3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8318E221743200066DA3B /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		664994D322184727009CAAF2 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		664994D522185195009CAAF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		664994D722185558009CAAF2 /* RunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCell.swift; sourceTree = "<group>"; };
+		664994D922186BE2009CAAF2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		664994DB221870AA009CAAF2 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		66F8318C221715E50066DA3B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		66F8318E221743200066DA3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8698C4B2E5E6334A8BF65C65 /* Pods_Home_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				664994D522185195009CAAF2 /* Constants.swift */,
+				664994DB221870AA009CAAF2 /* RealmConfig.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				664994D322184727009CAAF2 /* Run.swift */,
+				664994D922186BE2009CAAF2 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,11 +279,13 @@
 			files = (
 				664994D822185558009CAAF2 /* RunCell.swift in Sources */,
 				66F8318D221715E50066DA3B /* LocationViewController.swift in Sources */,
+				664994DA22186BE2009CAAF2 /* Location.swift in Sources */,
 				66F8318F221743200066DA3B /* Extensions.swift in Sources */,
 				66090C552215F63F0036D23A /* CurrentRunViewController.swift in Sources */,
 				664994D622185195009CAAF2 /* Constants.swift in Sources */,
 				66090C402215D5040036D23A /* RunStatisticViewController.swift in Sources */,
 				66090C3C2215D5040036D23A /* AppDelegate.swift in Sources */,
+				664994DC221870AA009CAAF2 /* RealmConfig.swift in Sources */,
 				664994D422184727009CAAF2 /* Run.swift in Sources */,
 				66090C3E2215D5040036D23A /* StartRunViewController.swift in Sources */,
 			);

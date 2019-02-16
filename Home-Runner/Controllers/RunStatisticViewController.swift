@@ -19,6 +19,12 @@ class RunStatisticViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        tableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
