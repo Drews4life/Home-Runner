@@ -24,6 +24,7 @@ class CurrentRunViewController: LocationViewController {
     var timer = Timer()
     
     var runDistance: Double = 0
+    var pace = 0
     var counter = 0
     
     override func viewDidLoad() {
@@ -43,15 +44,25 @@ class CurrentRunViewController: LocationViewController {
     func initiateRun() {
         manager?.startUpdatingLocation()
         startTimer()
+        pauseBtn.setImage(UIImage(named: "pauseButton"), for: .normal)
     }
     
     func endRun() {
         manager?.stopUpdatingLocation()
     }
     
+    func pauseRun() {
+        startLocation = nil
+        lastLocation = nil
+        timer.invalidate()
+        manager?.stopUpdatingLocation()
+        pauseBtn.setImage(UIImage(named: "resumeButton"), for: .normal)
+    }
+  
+    
     func startTimer() {
         durationLbl.text = counter.formatTimeDuration()
-        var timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
     }
     
     @objc func updateCounter() {
@@ -60,7 +71,11 @@ class CurrentRunViewController: LocationViewController {
     }
     
     @IBAction func pauseBtnClick(_ sender: Any) {
-        
+        if timer.isValid {
+            pauseRun()
+        } else {
+            initiateRun()
+        }
     }
     
     func setupGesturesForSlider() {
@@ -68,6 +83,11 @@ class CurrentRunViewController: LocationViewController {
         sliderImgView.addGestureRecognizer(swipe)
         sliderImgView.isUserInteractionEnabled = true
         swipe.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    func calculatePace(time seconds: Int, perKm km: Double) -> String {
+        pace = Int(Double(seconds) / km)
+        return pace.formatTimeDuration()
     }
 
     @objc func onSwipeAction(sender: UIPanGestureRecognizer) {
@@ -115,6 +135,9 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLbl.text = "\(runDistance.metersToKilometers(places: 2))"
+            if counter > 0 && runDistance > 0 {
+                paceLbl.text = calculatePace(time: counter, perKm: runDistance.metersToKilometers(places: 2))
+            }
         }
         
         lastLocation = locations.last;
