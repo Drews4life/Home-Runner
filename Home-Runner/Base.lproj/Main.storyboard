@@ -250,64 +250,77 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="runLogCell" rowHeight="67" id="NMz-7E-v8H">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="runLogCell" rowHeight="85" id="NMz-7E-v8H" customClass="RunCell" customModule="Home_Runner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NMz-7E-v8H" id="xkH-Rg-nh4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-nt-tWE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="85" id="ARW-Ns-NW8"/>
+                                                    </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rmw-5r-hAt">
-                                                    <rect key="frame" x="161" y="10.5" width="53.5" height="46"/>
+                                                    <rect key="frame" x="151.5" y="13.5" width="72" height="58.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Ro-3m-V6t">
-                                                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="72" height="37"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-P0-Ffv">
-                                                            <rect key="frame" x="16" y="29.5" width="21.5" height="16.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                            <rect key="frame" x="23.5" y="39" width="25" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8El-Jv-BJZ">
-                                                    <rect key="frame" x="23" y="11.5" width="54.5" height="44"/>
+                                                    <rect key="frame" x="23" y="16" width="74" height="53"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="owc-KS-5je">
-                                                            <rect key="frame" x="0.0" y="0.0" width="54.5" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="74" height="26"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-bk-l2N">
-                                                            <rect key="frame" x="0.0" y="24.5" width="54.5" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                            <rect key="frame" x="0.0" y="31" width="74" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14/02/19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5wq-4O-ZTf">
-                                                    <rect key="frame" x="313.5" y="24" width="54.5" height="19.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                                    <rect key="frame" x="298.5" y="30" width="69.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-Xe-tFv">
+                                                    <rect key="frame" x="0.0" y="83" width="375" height="2"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="AhJ-f5-Nev"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="rmw-5r-hAt" firstAttribute="centerY" secondItem="xkH-Rg-nh4" secondAttribute="centerY" id="5VW-sN-e3p"/>
                                                 <constraint firstItem="8El-Jv-BJZ" firstAttribute="leading" secondItem="xkH-Rg-nh4" secondAttribute="leadingMargin" constant="8" id="7L7-nW-25m"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jpe-nt-tWE" secondAttribute="bottom" id="B9i-ef-UTW"/>
+                                                <constraint firstItem="IjY-Xe-tFv" firstAttribute="leading" secondItem="xkH-Rg-nh4" secondAttribute="leading" id="D6F-4S-SFf"/>
                                                 <constraint firstItem="rmw-5r-hAt" firstAttribute="centerX" secondItem="xkH-Rg-nh4" secondAttribute="centerX" id="GAf-Rz-s3u"/>
+                                                <constraint firstAttribute="bottom" secondItem="IjY-Xe-tFv" secondAttribute="bottom" id="I3i-sc-dey"/>
+                                                <constraint firstAttribute="trailing" secondItem="IjY-Xe-tFv" secondAttribute="trailing" id="NN5-IR-Ng9"/>
                                                 <constraint firstItem="5wq-4O-ZTf" firstAttribute="centerY" secondItem="xkH-Rg-nh4" secondAttribute="centerY" id="Zzg-Fd-Ufe"/>
                                                 <constraint firstItem="5wq-4O-ZTf" firstAttribute="trailing" secondItem="xkH-Rg-nh4" secondAttribute="trailingMargin" constant="8" id="g4w-VE-Yo3"/>
                                                 <constraint firstItem="8El-Jv-BJZ" firstAttribute="centerY" secondItem="xkH-Rg-nh4" secondAttribute="centerY" id="iC9-u6-MWf"/>
@@ -317,6 +330,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="avgPaceLbl" destination="8Ro-3m-V6t" id="nfa-gZ-SUc"/>
+                                            <outlet property="runDateLbl" destination="5wq-4O-ZTf" id="hwm-d7-UgZ"/>
+                                            <outlet property="runDurationLbl" destination="owc-KS-5je" id="Rw9-Rp-dOf"/>
+                                            <outlet property="totalDistanceLbl" destination="nyS-bk-l2N" id="DOj-LP-QQR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -337,6 +356,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Logs" image="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="8nX-dh-c0z" id="zsX-54-pI4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

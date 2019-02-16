@@ -49,6 +49,7 @@ class CurrentRunViewController: LocationViewController {
     
     func endRun() {
         manager?.stopUpdatingLocation()
+        Run.saveRunToRealm(pace: pace, distance: runDistance, duration: counter)
     }
     
     func pauseRun() {

@@ -8,13 +8,33 @@
 
 import UIKit
 
-class RunStatisticViewController: UIViewController {
-
+class RunStatisticViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Run.retrieveAllRuns()?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "runLogCell", for: indexPath) as? RunCell else { return RunCell() }
+        guard let run = Run.retrieveAllRuns()?[indexPath.row] else { return RunCell() }
+        
+        cell.configureCell(run: run)
+        
+        return cell
+    }
 
 }
 
